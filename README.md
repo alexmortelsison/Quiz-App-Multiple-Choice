@@ -2,6 +2,7 @@
 ![スクリーンショット 2024-05-04 120758](https://github.com/alexmortelsison/Quiz-App-Multiple-Choice/assets/150509106/5341216b-2ec9-4820-949c-f8476068f8d7width="400"height="790")
 
 Multiple Choice Quiz App
+
 This is a simple multiple choice quiz application built using [insert technologies/frameworks/libraries used].
 
 Features
