@@ -10,7 +10,7 @@ Score Tracking: Keeps track of users' scores as they progress through the quiz.
 Randomized Questions: Questions are presented in a random order to enhance user engagement.
 Responsive Design: The app is designed to work seamlessly across various devices and screen sizes.
 Technologies Used
-[List of technologies, frameworks, libraries used in the project]
+Dart and Flutter
 Installation
 To run this application locally, follow these steps:
 
@@ -19,10 +19,8 @@ Navigate to the project directory: cd quiz-app
 Install dependencies: npm install or yarn install
 Start the development server: npm start or yarn start
 Open your web browser and visit http://localhost:3000 to view the app.
-Usage
-[Provide instructions on how to use the app, including any necessary setup or prerequisites]
-[Include screenshots or gifs demonstrating the app's functionality]
-Contributing
+
+
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
 Fork the repository.
@@ -30,9 +28,7 @@ Create a new branch (git checkout -b feature/improvement)
 Make your changes and commit them (git commit -am 'Add new feature')
 Push to the branch (git push origin feature/improvement)
 Create a new Pull Request.
-License
-[Choose an appropriate license for your project and include it here. If unsure, consider using an open-source license like MIT or Apache 2.0.]
 
 Credits
-This project was created by [Your Name].
-Special thanks to [List any individuals or organizations you'd like to acknowledge].
+This project was created by Alex Sison.
+
