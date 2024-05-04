@@ -1,34 +1,24 @@
 import 'package:flutter/material.dart';
-
-import '../screens/quiz_screen.dart';
+import 'package:quiz_app/const.dart';
 
 class StartButton extends StatelessWidget {
+  final VoidCallback onTap;
   const StartButton({
     super.key,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return const QuizScreen();
-            },
-          ),
-        );
-      },
+      onPressed: onTap,
       icon: const Icon(
         Icons.arrow_forward_ios,
-        color: Color.fromARGB(255, 4, 92, 85),
+        color: startButtonIconColor,
       ),
       label: const Text(
         'Start',
-        style: TextStyle(
-          color: Color.fromARGB(255, 4, 92, 85),
-        ),
+        style: startButtonTextStyle,
       ),
     );
   }

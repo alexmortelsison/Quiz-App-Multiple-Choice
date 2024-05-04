@@ -33,7 +33,18 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 child: image,
               ),
-              const StartButton()
+              StartButton(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const QuizScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),

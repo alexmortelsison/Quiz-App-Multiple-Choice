@@ -23,3 +23,9 @@ const answerTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 15,
 );
+
+const startButtonTextStyle = TextStyle(
+  color: Color.fromARGB(255, 4, 92, 85),
+);
+
+const startButtonIconColor = Color.fromARGB(255, 4, 92, 85);
