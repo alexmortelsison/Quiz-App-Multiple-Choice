@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/const.dart';
+import 'package:quiz_app/utils/const.dart';
 import 'package:quiz_app/models/questions.dart';
-import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
-import '../models/progress_bar.dart';
+import '../components/progress_bar.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});

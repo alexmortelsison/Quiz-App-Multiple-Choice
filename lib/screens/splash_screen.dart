@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/const.dart';
+import 'package:quiz_app/utils/const.dart';
 import 'package:quiz_app/screens/quiz_screen.dart';
 
-import '../models/start_button.dart';
+import '../components/start_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

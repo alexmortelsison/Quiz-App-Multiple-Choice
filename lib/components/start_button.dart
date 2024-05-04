@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/const.dart';
+import 'package:quiz_app/utils/const.dart';
 
 class StartButton extends StatelessWidget {
   final VoidCallback onTap;
