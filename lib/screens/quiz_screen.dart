@@ -146,7 +146,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                     ),
                     Text(
-                      '$finalScore',
+                      '$finalScore / ${questions.length}',
                       style: const TextStyle(
                         color: Color.fromARGB(255, 6, 66, 116),
                         fontWeight: FontWeight.bold,

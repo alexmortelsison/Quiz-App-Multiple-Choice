@@ -1,5 +1,11 @@
-const kTextStyle = GoogleFonts.lato(
-                        fontWeight = FontWeight.bold,
-                        color = Colors.white,
-                        fontSize = 30,
-                      ),
+import 'package:flutter/material.dart';
+
+ColorScheme colorScheme = ColorScheme.fromSeed(seedColor: Colors.deepPurple);
+List<MaterialColor> backgroundColor = [
+  Colors.blue,
+  Colors.green,
+];
+
+final Image image = Image.asset(
+  'images/splash.png',
+);

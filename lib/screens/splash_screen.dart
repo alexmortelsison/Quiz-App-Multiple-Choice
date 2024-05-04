@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/const.dart';
 import 'package:quiz_app/screens/quiz_screen.dart';
+
+import '../models/start_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,12 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Colors.blue,
-                Colors.green,
-              ],
+              colors: backgroundColor,
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -31,32 +31,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: const EdgeInsets.symmetric(
                   vertical: 50,
                 ),
-                child: Image.asset(
-                  'images/splash.png',
-                ),
+                child: image,
               ),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const QuizScreen();
-                      },
-                    ),
-                  );
-                },
-                icon: const Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color.fromARGB(255, 4, 92, 85),
-                ),
-                label: const Text(
-                  'Start',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 4, 92, 85),
-                  ),
-                ),
-              )
+              const StartButton()
             ],
           ),
         ),
