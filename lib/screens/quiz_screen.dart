@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app/const.dart';
 import 'package:quiz_app/models/questions.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
+
+import '../models/progress_bar.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -51,12 +54,9 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Colors.blue,
-                Colors.green,
-              ],
+              colors: backgroundColor,
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -65,38 +65,14 @@ class _QuizScreenState extends State<QuizScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SimpleCircularProgressBar(
-                maxValue: maxScore,
-                valueNotifier: scoreKeeper,
-                mergeMode: true,
-                onGetText: (double value) {
-                  TextStyle centerTextStyle = TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent.withOpacity(value * 0.1),
-                  );
-
-                  return Text(
-                    '${value.toInt() * 10}%',
-                    style: centerTextStyle,
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 80,
-              ),
+              ProgressBar(maxScore: maxScore, scoreKeeper: scoreKeeper),
+              const SizedBox(height: 80),
               Text(
                 questions[currentIndex]['question'],
                 textAlign: TextAlign.center,
-                style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: questionTextStyle,
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -121,11 +97,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         },
                         child: Text(
                           answer,
-                          style: const TextStyle(
-                            color: Color.fromARGB(255, 4, 92, 85),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
+                          style: answerTextStyle,
                         ),
                       ),
                     ),
